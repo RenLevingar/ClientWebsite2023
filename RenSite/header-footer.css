@@ -1,9 +1,40 @@
+/* header */
 header{
+    display: flex;
     background-color: #193375;
     height: 100px;
   }
+.logo{
+  width: auto;
+  height: clamp(5rem, 4.063rem + 5vw, 5.625rem);
+  padding: clamp(0.5rem, 0.313rem + 1vw, 0.625rem);
+}
+header > div > h1{
+  color: white;
+  font-size: 20px;
+  padding-top: clamp(2.375rem, 0.125rem + 9.6vw, 3.125rem);
+  padding-right: clamp(2.375rem, 0.875rem + 6.4vw, 2.875rem);
+}
+header > div > div > h1{
+  color: white;
+  font-size: 20px;
+  padding-top: clamp(2.375rem, 0.125rem + 9.6vw, 3.125rem);
+  padding-right: clamp(0.625rem, -0.125rem + 3.2vw, 0.875rem);
+}
+.headerBTNS{
+  display: flex;
+}
+
+/* footer */
   footer{
     margin-top: 100px;
     background-color: #193375;
     height: 100px;
   }
+
+/* centerer */
+.center{
+  display: flex;
+  justify-content: center;
+}
+
