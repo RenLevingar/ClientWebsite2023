@@ -6,8 +6,10 @@ header{
   }
 .logo{
   width: auto;
-  height: clamp(5rem, 4.063rem + 5vw, 5.625rem);
-  padding: clamp(0.5rem, 0.313rem + 1vw, 0.625rem);
+  height: clamp(3.125rem, 2.009rem + 2.976vw, 4.688rem);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-left: 10px;
 }
 header > div > h1{
   color: white;
@@ -17,17 +19,18 @@ header > div > h1{
 }
 header > div > div > h1{
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   padding-top: clamp(2.375rem, 0.125rem + 9.6vw, 3.125rem);
   padding-right: clamp(0.625rem, -0.125rem + 3.2vw, 0.875rem);
 }
 .headerBTNS{
   display: flex;
+  padding-left: clamp(2.188rem, 1.518rem + 1.786vw, 3.125rem);
 }
 
 /* footer */
   footer{
-    margin-top: 100px;
+    margin-top: clamp(4.375rem, -0.547rem + 21vw, 6.016rem);
     background-color: #193375;
     height: 100px;
   }
@@ -37,4 +40,8 @@ header > div > div > h1{
   display: flex;
   justify-content: center;
 }
-
+.totalCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
