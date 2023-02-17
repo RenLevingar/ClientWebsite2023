@@ -1,0 +1,377 @@
+*{
+ margin: 0;
+ color: #bf1e61;
+}
+
+*::-webkit-scrollbar{
+display:none;
+}
+
+body{
+ background-image: linear-gradient(to bottom, #644bff, #ff7130);
+}
+
+p{
+ width: 60%;
+ padding-left: 2vw;
+}
+
+nav{
+ position: fixed;
+ top:0;
+ background-color: #171721;
+ width: 100vw;
+}
+
+#logo{
+ max-width: 150px;
+ max-height:150px; 
+ padding-left: 2vw;
+}
+
+button{
+ margin-top: 40px;
+ margin-left: 12px;
+ margin-right: 12px;
+ padding: 5px;
+ border: 2px solid #bf1e61;
+ border-radius: 15px;
+ background-color: black;
+ float: right;
+ font-size: 2rem;
+}
+
+button:hover{
+ border: 1px solid whitesmoke
+}
+
+input {
+ height: 55px;
+ width: 80%;
+ outline: none;
+ border: none;
+ border-radius: 50px;
+ padding: 0 60px 0 20px;
+ font-size: 18px;
+ box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+ list-style: none;
+ height: 30px;
+ width: 450px;
+ display: none;
+ cursor: default;
+ border: 2px solid #644bff;
+ margin: auto;
+ background-color: whitesmoke;
+}
+
+ul {
+ border-radius: 50px;
+}
+
+form li {
+ display: block;
+}
+
+form .icon {
+ position: absolute;
+ right: 0px;
+ top: 0px;
+ height: 55px;
+ width: 55px;
+ text-align: center;
+ line-height: 55px;
+ font-size: 20px;
+ color: #644bff;
+ cursor: pointer;
+ background-color: whitesmoke;
+ border-radius: 100%;
+}
+
+
+.fade{
+    transition: 1s;
+}
+.fade:hover{
+ opacity: .6;
+}
+form {
+ position: absolute;
+ right: 35vw;
+ top: 4vh;
+ height: 55px;
+ width: 55px;
+ text-align: center;
+ font-size: 20px;
+ color: #644bff;
+ cursor: pointer;
+ background: #fff;
+ width: 100%;
+ border-radius: 50px;
+ box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+ max-width: 450px;
+}
+
+
+.line {
+ position: fixed;
+ background-color: black;
+ border-radius: 2px;
+ width: 20px;
+ z-index: -100;
+}
+.circle {
+ position: fixed;
+ border: 10px solid black;
+ border-radius: 100%;
+ height: 20px;
+ width: 20px;
+ z-index: -100;
+}
+
+.slant {
+ position: fixed;
+ background-color: black;
+ border-radius: 1.6px;
+ width: 20px;
+ height: 128px;
+ z-index: -100;
+}
+
+#line1{
+ height:300px;
+ left: 8vw;
+ top: 25vh;
+}
+
+#circle1{
+ left: 7.4vw;
+ top:21vh;
+}
+
+#slant1{
+ left: 10vw;
+ top: 57.5vh;
+ rotate: -35deg;
+ transform: skewY(-35deg);
+}
+
+#line2{
+ height: 255px;
+ left: 12vw;
+ top: 70vh;
+ 
+}
+
+
+#line3 {
+ height: 300px;
+ left: 12vw;
+ top: 25vh;
+ 
+}
+
+#circle2 {
+
+ left: 11.4vw;
+ top: 21vh;
+ 
+}
+
+#slant2 {
+ left: 14vw;
+ top: 57.5vh;
+ 
+ rotate: -35deg;
+ transform: skewY(-35deg);
+}
+
+#line4 {
+ height: 255px;
+ left: 16vw;
+ top: 70vh;
+ 
+}
+
+#line5 {
+ height: 300px;
+ left: 4vw;
+ top: 25vh;
+ 
+}
+
+#circle3 {
+ left: 3.4vw;
+ top: 21vh;
+}
+
+#slant3 {
+ left: 6vw;
+ top: 57.5vh;
+ rotate: -35deg;
+ transform: skewY(-35deg);
+}
+
+#line6 {
+ height: 255px;
+ left: 8vw;
+ top: 70vh;
+ 
+}
+
+#line7 {
+ height: 300px;
+ left: 90.19vw;
+ top: 25vh;
+ 
+}
+
+#circle4 {
+ left: 89.6vw;
+ top: 21vh;
+}
+
+#slant4 {
+ left: 88.15vw;
+ top: 57.5vh;
+ rotate: 35deg;
+ transform: skewY(35deg);
+}
+
+#line8 {
+ height: 255px;
+ left: 86.15vw;
+ top: 70vh;
+}
+
+
+#line9 {
+ height: 300px;
+ left: 86.2vw;
+ top: 25vh;
+}
+
+#circle5 {
+ left: 85.6vw;
+ top: 21vh;
+}
+
+#slant5 {
+ left: 84.19vw;
+ top: 57.5vh;
+ rotate: 35deg;
+ transform: skewY(35deg);
+}
+
+#line10 {
+ height: 255px;
+ left: 82.15vw;
+ top: 70vh;
+}
+
+#line11 {
+ height: 300px;
+ left: 94.2vw;
+ top: 25vh;
+}
+
+#circle6 {
+ left: 93.6vw;
+ top: 21vh;
+}
+
+#slant6 {
+ left: 92.15vw;
+ top: 57.5vh;
+ rotate: 35deg;
+ transform: skewY(35deg);
+}
+
+#line12 {
+ height: 255px;
+ left: 90.15vw;
+ top: 70vh;
+}
+
+.container{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 60%;
+ margin-left: 20%;
+ height:100vh;
+ background-color: #171721;
+}
+
+h1{
+ font-size: 4rem;
+ padding: 5px;
+}
+
+h3{
+ font-size:xx-large;
+}
+
+.computer{
+ width: 100%;
+ height:30%;
+}
+
+
+#container2{
+ width: 100%;
+ margin:0;
+}
+
+#container3{
+ width: 50%;
+ height: 70vh;
+ margin:0;
+ float: left;
+}
+
+#container4{
+ width: 50%;
+ height: 70vh;
+ margin:0;
+ float:right;
+}
+
+.scroller {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+    scroll-snap-align: start;
+}
+
+#scrollUp{
+    rotate: 90deg;
+    color: #fff;
+    font-size: 4rem;
+    position: fixed;
+    border:0;
+    background-color: transparent;
+    right: 2vw;
+    top:8vh;
+}
+
+#scrollDown{
+    rotate: -90deg;
+    color: #fff;
+    font-size: 4rem;
+    position: fixed;
+    border:0;
+    background-color: transparent;
+    right: 2vw;
+    top:85vh;
+}
+
+#container5{
+    height:30vh;
+}
