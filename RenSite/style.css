@@ -1,0 +1,56 @@
+*{margin: 0;padding: 0;overflow-x: hidden;}
+
+/* page oopening */
+#openingIMG{
+    width: 100%;
+    height: clamp(25vh, 6rem, 30vh);
+    filter: blur(2px);
+}
+
+/* first box */
+#infoBox1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1.563rem, -0.688rem + 9.6vw, 2.313rem);
+}
+#infoBox1 > p{text-align: center;}
+#infoBox1 > h1{color: #193375; font-size: 30px;text-decoration: underline;}
+
+/* first image */
+#pcIMG{
+    width: 68%;
+    height: clamp(11.625rem, 5.25rem + 27.2vw, 13.75rem);
+}
+
+/* services box */
+#services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1.563rem, -0.688rem + 9.6vw, 2.313rem);
+}
+#services > h1{color: #193375; font-size: 30px; text-decoration: underline;}
+#services > div > h3{text-align: center;}
+#services > div > p{text-align: center; padding: 10px;}
+#services > div{padding: clamp(0.938rem, -1.875rem + 12vw, 1.875rem);border-bottom: 2px solid #193375;}
+
+/* second info box */
+#infoBox2 > h3{color: #193375;}
+
+/* third info box */
+#infoBox3{margin-top: clamp(0.625rem, -3.125rem + 16vw, 1.875rem);}
+#infoBox3 > h3{color: #193375;}
+
+
+/* call to action */
+#cta{
+    color: #193375;
+    background-color: yellow;
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: clamp(2.5rem, -0.313rem + 12vw, 3.438rem);
+}
+
