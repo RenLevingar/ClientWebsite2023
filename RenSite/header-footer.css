@@ -29,11 +29,16 @@ header > div > div > h1{
 }
 
 /* footer */
-  footer{
-    margin-top: clamp(4.375rem, -0.547rem + 21vw, 6.016rem);
-    background-color: #193375;
-    height: 100px;
-  }
+footer{
+  margin-top: clamp(4.375rem, -0.547rem + 21vw, 6.016rem);
+  background-color: #193375;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer > div > h1{color: yellow;font-size: clamp(0.938rem, 2.38rem + -6.154vw, 2.188rem);}
+footer > div > h2{color: white;font-size: clamp(0.625rem, -0.313rem + 4vw, 0.938rem);text-align: center;}
 
 /* centerer */
 .center{

@@ -1,10 +1,18 @@
 *{margin: 0;padding: 0;overflow-x: hidden;}
 
-/* page oopening */
-#openingIMG{
+/* opening */
+#opening{
+    background-image: url("./images/openingIMG.jpg"); 
+    background-size: cover;
+    height: 200px;
+    color: white;
+}
+#opening > div > h1{padding: clamp(1.063rem, -0.438rem + 6.4vw, 1.563rem);}
+#opening > div > h4{padding: clamp(1.063rem, -0.438rem + 6.4vw, 1.563rem);text-align: center;width: 150px;}
+.blur{
     width: 100%;
-    height: clamp(25vh, 6rem, 30vh);
-    filter: blur(2px);
+    height:100%;
+    backdrop-filter: blur(2px);
 }
 
 /* first box */
@@ -19,8 +27,8 @@
 
 /* first image */
 #pcIMG{
-    width: 68%;
-    height: clamp(11.625rem, 5.25rem + 27.2vw, 13.75rem);
+    width: clamp(12.5rem, 3.125rem + 40vw, 15.625rem);
+    height: auto;
 }
 
 /* services box */
@@ -48,9 +56,46 @@
     color: #193375;
     background-color: yellow;
     border-radius: 20px;
-    width: 150px;
-    height: 50px;
+    width: clamp(12.5rem, 3.125rem + 40vw, 15.625rem);
+    height: auto;
     font-size: 20px;
-    margin-top: clamp(2.5rem, -0.313rem + 12vw, 3.438rem);
+    margin-top: clamp(2.5re, -0.313rem + 12vw, 3.438rem);
+    border: 2px solid black;
 }
+
+/* media queries */
+@media (max-width: 900px) and (min-width: 501px) {
+
+    #opening{height: clamp(15.625rem, 3.853rem + 37.594vw, 25rem);}
+    #opening > h1{font-size: clamp(2.813rem, 0.458rem + 7.519vw, 4.688rem);}
+    #opening > h4{font-size: clamp(1.25rem, -0.32rem + 5.013vw, 2.5rem); width: clamp(12.5rem, -11.043rem + 75.188vw, 31.25rem);}
+    
+    #infoBox1 > h1{font-size: 40px;}
+    #infoBox1 > p{font-size: 20px;}
+
+    #services > h1{font-size: 40px;}
+    #services > div > p{font-size: 20px;padding-left: clamp(0rem, -5.101rem + 16.291vw, 4.063rem);padding-right: clamp(0rem, -5.101rem + 16.291vw, 4.063rem);}
+    #services > div > h3{font-size: 30px;}
+
+    #pcIMG{width: 500px;}
+
+    #cta{width: 200px; height: 75px; font-size: 30px;}
+
+}
+@media (max-width: 10000px) and (min-width: 901px){
+
+    #opening{height: clamp(25rem, -12.667rem + 66.89vw, 37.5rem);}
+
+    #infoBox1 > h1{font-size: 60px;}
+    #infoBox1 > p{font-size: 30px;}
+
+    #services > h1{font-size: 60px;}
+    #services > div > p{font-size: 30px;padding-left: 100px;padding-right: 100px;}
+    #services > div > h3{font-size: 45px;}
+
+    #pcIMG{width: 750px;}
+
+    #cta{width: 300px; height: 113px; font-size: 45px;}
+}
+
 
