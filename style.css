@@ -245,7 +245,6 @@ button:hover, button:focus{
  margin-left: 20%;
  height:100vh;
  background-color: #171721;
- padding: 0 1vw 0 1vw;
 }
 
 h1{
@@ -255,6 +254,7 @@ h1{
 
 h3{
  font-size:xx-large;
+padding: 0 1vw 0 1vw;
 }
 
 .computer{
