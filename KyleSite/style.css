@@ -24,6 +24,7 @@ nav{
 }
 
 #logo{
+    display: flex;
  height: 130px; 
  padding: 2px 0px 2px 2vw;
 }
