@@ -24,6 +24,7 @@ nav{
 }
 
 #logo{
+    display: flex;
  height: 130px; 
  padding: 2px 0px 2px 2vw;
 }
@@ -50,7 +51,7 @@ button:hover, button:focus{
 
 
 .fade{
-    transition: 1.6s;
+    transition: 1s;
 }
 
 
@@ -254,7 +255,7 @@ h1{
 
 h3{
  font-size:xx-large;
-padding: 0 1vw 0 1vw;
+ padding: 0 1vw 0 1vw;
 }
 
 .computer{

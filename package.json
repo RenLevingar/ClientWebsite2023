@@ -1,0 +1,22 @@
+{
+  "name": "clientwebsite2023",
+  "version": "1.0.0",
+  "description": "QuikTeq Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenLevingar/ClientWebsite2023.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RenLevingar/ClientWebsite2023/issues"
+  },
+  "homepage": "https://github.com/RenLevingar/ClientWebsite2023#readme",
+  "devDependencies": {
+    "coffeescript": "^2.7.0"
+  }
+}
