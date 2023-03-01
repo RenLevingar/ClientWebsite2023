@@ -1,3 +1,47 @@
 * {
-  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: fixed;
+}
+
+.headerBTNS {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 50px;
+  align-items: center;
+}
+
+.headerBTNS button {
+  background-color: black;
+  color: white;
+  margin: 0 10px 0 10px;
+  font-size: 30px;
+  transition: all 0.5s;
+}
+
+.headerBTNS button:hover {
+  color: #ff7130;
+}
+
+#phoneHeader {
+  display: flex;
+  justify-content: center;
+  background-color: #ff7130;
+  margin: 0;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#mainHeader {
+  display: flex;
+  padding: 20px;
 }/*# sourceMappingURL=styles.css.map */
