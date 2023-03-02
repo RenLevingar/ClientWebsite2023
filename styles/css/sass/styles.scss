@@ -1,3 +1,6 @@
+@import "./utilities";
+@import "./reset";
+
 // Universal selector
 *{
     margin: 0;
@@ -42,3 +45,4 @@ nav{
     display: flex;
     padding: 20px;
 }
+
