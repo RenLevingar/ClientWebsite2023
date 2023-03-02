@@ -44,4 +44,16 @@ nav {
 #mainHeader {
   display: flex;
   padding: 20px;
+}
+
+.headerLinks {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.opening {
+  background-image: url("/images/banner.jpg");
+  background-size: cover;
+  height: 200px;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
