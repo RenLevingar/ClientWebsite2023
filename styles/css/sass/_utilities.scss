@@ -1,0 +1,20 @@
+@mixin theme($dark-theme: true) {
+ @if $dark-theme {
+  background: darken($main-color, 100%);
+  color: lighten($text-color, 100%);
+  }
+ }
+
+@mixin flexCenter($direction) {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: $direction;
+}
+
+@mixin navbar($main-color) {
+ position: fixed;
+ top: 0;
+ background-color: $main-color;
+ width: 100vw;
+}
