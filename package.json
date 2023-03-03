@@ -18,5 +18,8 @@
   "homepage": "https://github.com/RenLevingar/ClientWebsite2023#readme",
   "devDependencies": {
     "coffeescript": "^2.7.0"
+  },
+  "dependencies": {
+    "sass": "^1.58.3"
   }
 }
