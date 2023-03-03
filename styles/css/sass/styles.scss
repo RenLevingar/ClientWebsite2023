@@ -1,18 +1,21 @@
 @import "./utilities";
 @import "./reset";
 
+$main-color: #ff7130;
+$text-color: #000000;
+$secondary-color: #ffffff;
+
 // Universal selector
 *{
-    margin: 0;
-    padding: 0;
+    color: $text-color;
 }
 
 // Header
 nav{
     display: flex;
     flex-direction: column;
-    background-color: black;
-    color: white;
+    background-color: $text-color;
+    color: $secondary-color;
     width: 100%;
     position: sticky;
 }
@@ -24,19 +27,31 @@ nav{
     align-items: center;
 }
 .headerBTNS button{
-    background-color: black;
-    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: $text-color;
+    color: $secondary-color;
     margin: 0 10px 0 10px;
     font-size: 30px;
     transition: all 0.5s;
+    &:after {
+        display: block;
+        content: '';
+        border-bottom: solid 3px $secondary-color;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+    &:hover:after {
+        transform: scaleX(1);
+    }
 }
 .headerBTNS button:hover{
-    color: #ff7130;
+    color: $main-color;
 }
 #phoneHeader{
     display: flex;
     justify-content: center;
-    background-color: #ff7130;
+    background-color: $main-color;
     margin: 0;
     padding: 10px;
     font-size: 15px;
@@ -46,8 +61,8 @@ nav{
     padding: 20px;
 }
 .headerLinks{
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-left: 1px solid $secondary-color;
+    border-right: 1px solid $secondary-color;
 }
 
 // Opening
@@ -55,6 +70,37 @@ nav{
     background-image: url("../../images/banner.jpg"); 
     background-size: cover;
     height: 200px;
-    color: white;
+    color: $secondary-color;
     width: 100%;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    padding: clamp(1.563rem, -0.688rem + 9.6vw, 2.313rem);
+}
+.mainH1 {
+    text-decoration: underline;
+    font-size: 4rem;
+    padding: {
+        bottom: 1.3125rem;
+    }
+}
+
+.mainParagraph{
+    overflow-wrap: break-word;
+    font-size: 1.875rem;
+}
+
+.section3{
+    width: 40%;
+    float: left;
+}
+
+.section4{
+    width: 40%;
+    float: right;
 }

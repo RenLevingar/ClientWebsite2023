@@ -97,15 +97,14 @@ table {
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  color: #000000;
 }
 
 nav {
   display: flex;
   flex-direction: column;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   width: 100%;
   position: sticky;
 }
@@ -119,11 +118,23 @@ nav {
 }
 
 .headerBTNS button {
-  background-color: black;
-  color: white;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #ffffff;
   margin: 0 10px 0 10px;
   font-size: 30px;
   transition: all 0.5s;
+}
+.headerBTNS button:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #ffffff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.headerBTNS button:hover:after {
+  transform: scaleX(1);
 }
 
 .headerBTNS button:hover {
@@ -145,14 +156,44 @@ nav {
 }
 
 .headerLinks {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
 }
 
 .opening {
   background-image: url("../../images/banner.jpg");
   background-size: cover;
   height: 200px;
-  color: white;
+  color: #ffffff;
   width: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: clamp(1.563rem, -0.688rem + 9.6vw, 2.313rem);
+}
+
+.mainH1 {
+  text-decoration: underline;
+  font-size: 4rem;
+  padding-bottom: 1.3125rem;
+}
+
+.mainParagraph {
+  overflow-wrap: break-word;
+  font-size: 1.875rem;
+}
+
+.section3 {
+  width: 40%;
+  float: left;
+}
+
+.section4 {
+  width: 40%;
+  float: right;
 }/*# sourceMappingURL=styles.css.map */
