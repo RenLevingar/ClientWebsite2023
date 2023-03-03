@@ -95,25 +95,64 @@ nav{
 // footer
 footer{
     margin-top: clamp(4.375rem, -0.547rem + 21vw, 6.016rem);
-    background-color: #ff7130;
+    background-color: $main-color;
     height: 125px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
+    width: 100%;
   }
   footer{
     div{
-        h1{color: #ffffff;
+        h1{color: $secondary-color;
         font-size: 20px;
         } 
     } 
 }
   footer{
     div{
-        h2{color: #ffffff;
+        h2{color: $secondary-color;
             font-size: 15px;
             text-align: center;
         }
     }
   } 
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: clamp(1.563rem, -0.688rem + 9.6vw, 2.313rem);
+}
+
+.mainH1 {
+    text-decoration: underline;
+    font-size: 4rem;
+
+    padding: {
+        bottom: 1.3125rem;
+    }
+}
+
+.mainParagraph {
+    overflow-wrap: break-word;
+    font-size: 1.875rem;
+}
+
+.section3 {
+    width: 45%;
+    float: left;
+    height: 610px
+}
+
+.section4 {
+    width: 45%;
+    float: right;
+}
+
+.banner{
+    color: $secondary-color;
+}

@@ -118,10 +118,12 @@ nav {
 }
 
 .headerBTNS button {
+  display: inline-block;
+  text-transform: uppercase;
   background-color: #000000;
   color: #ffffff;
-  margin: 0 clamp(0.625rem, 0.625rem + 0vw, 0.625rem) 0 clamp(0.625rem, 0.625rem + 0vw, 0.625rem);
-  font-size: clamp(1.875rem, 1.875rem + 0vw, 1.875rem);
+  margin: 0 10px 0 10px;
+  font-size: 30px;
   transition: all 0.5s;
 }
 .headerBTNS button:after {
@@ -170,8 +172,7 @@ nav {
 .blur {
   display: flex;
   height: 100%;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   padding: 20px;
   flex-direction: column;
   justify-content: center;
@@ -195,6 +196,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   padding: 10px;
+  width: 100%;
 }
 
 footer div h1 {
@@ -205,6 +207,7 @@ footer div h1 {
 footer div h2 {
   color: #ffffff;
   font-size: 15px;
+  text-align: center;
 }
 
 .section {
@@ -228,31 +231,16 @@ footer div h2 {
 }
 
 .section3 {
-  width: 40%;
+  width: 45%;
   float: left;
+  height: 610px;
 }
 
 .section4 {
-  width: 40%;
+  width: 45%;
   float: right;
 }
 
-.footer {
-  margin-top: clamp(4.375rem, -0.547rem + 21vw, 6.016rem);
-  background-color: #ff7130;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-footer > div > h1 {
-  color: white;
-  font-size: clamp(0.938rem, 2.38rem - 6.154vw, 2.188rem);
-}
-
-footer > div > h2 {
-  color: white;
-  font-size: clamp(0.625rem, -0.313rem + 4vw, 0.938rem);
-  text-align: center;
+.banner {
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
