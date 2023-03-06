@@ -190,7 +190,7 @@ footer {
 .mainH1 {
     text-decoration: underline;
     font-size: 4rem;
-
+    overflow-y: hidden;
     padding: {
         bottom: 1.3125rem;
     }
@@ -199,6 +199,7 @@ footer {
 .mainParagraph {
     overflow-wrap: break-word;
     font-size: 1.875rem;
+    overflow-y: hidden;
 }
 
 .section3 {

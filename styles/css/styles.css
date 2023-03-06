@@ -96,6 +96,15 @@ table {
   border-spacing: 0;
 }
 
+button,
+p,
+h1,
+h2,
+h3,
+h4 {
+  overflow-y: hidden;
+}
+
 * {
   overflow-x: hidden;
   color: #000000;
@@ -249,12 +258,14 @@ footer div h2 {
 .mainH1 {
   text-decoration: underline;
   font-size: 4rem;
+  overflow-y: hidden;
   padding-bottom: 1.3125rem;
 }
 
 .mainParagraph {
   overflow-wrap: break-word;
   font-size: 1.875rem;
+  overflow-y: hidden;
 }
 
 .section3 {
