@@ -19,13 +19,125 @@
     <div id="mainHeader">
       <img src="./images/logo.png" alt="QuikTeck Logo" id="logo">
       <div id="headerBTNS" class="headerBTNS">
-        <div class="headerLinks"><button>Virus Removal</button></div>
-        <div class="headerLinks"><button>Laptop Repairs</button></div>
-        <div class="headerLinks"><button>PC Repair and Upgrade</button></div>
-        <div class="headerLinks"><button>Website design</button></div>
+        <div class="headerLinks" onclick="document.getElementById('id01').style.display='block'"><button>Virus
+            Removal</button></div>
+        <div class="headerLinks" onclick="document.getElementById('id02').style.display='block'"><button>Laptop
+            Repairs</button></div>
+        <div class="headerLinks" onclick="document.getElementById('id03').style.display='block'"><button>PC Repair and
+            Upgrade</button></div>
+        <div class="headerLinks" onclick="document.getElementById('id0').style.display='block'"><button>Website
+            design</button></div>
       </div>
     </div>
   </nav>
+
+  <div id="id01" class="modal modal1">
+
+    <form class="modal-content animate">
+      <div class="imgcontainer">
+        <section class="opening2">
+          <h1 class="header">Virus Removal</h1>
+        </section>
+      </div>
+
+      <div class="container">
+        <h1>Virus Removal</h1>
+      </div>
+
+      <button onclick="document.getElementById('id01').style.display='none'" id="serviceBTNS">Back</button>
+  </div>
+  </form>
+  </div>
+
+  <div id="id02" class="modal modal2">
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input id="l1" type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input id="l2" type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" function login()>Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+  <div id="id03" class="modal modal3">
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input id="l1" type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input id="l2" type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" function login()>Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+  <div id="id04" class="modal modal4">
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input id="l1" type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input id="l2" type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" function login()>Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
 
   <div id="shade">
     <section class="opening">

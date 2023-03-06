@@ -26,6 +26,12 @@ nav {
     position: sticky;
 }
 
+img {
+    padding: {
+        right: 30px;
+    }
+}
+
 #headerBTNS {
     margin-right: clamp(-0.313rem, -5.804rem + 8.571vw, 0.625rem);
 }
@@ -37,29 +43,36 @@ nav {
     align-items: center;
 }
 
-.headerBTNS {
-    button {
-        display: inline-block;
-        text-transform: uppercase;
-        background-color: $text-color;
-        color: $secondary-color;
-        margin: 0 10px 0 10px;
-        font-size: 30px;
-        transition: all 0.5s;
+button {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: $text-color;
+    color: $secondary-color;
+    margin: 0 10px 0 10px;
+    font-size: 30px;
+    transition: all 0.5s;
 
-        &:after {
-            display: block;
-            content: '';
-            border-bottom: solid 3px $secondary-color;
-            transform: scaleX(0);
-            transition: transform 250ms ease-in-out;
-        }
+    &:after {
+        display: block;
+        content: '';
+        border-bottom: solid 3px $secondary-color;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
 
-        &:hover:after {
-            transform: scaleX(1);
-        }
+    &:hover:after {
+        transform: scaleX(1);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        transform: scaleX(1);
     }
 }
+
 
 .headerBTNS {
     button {
@@ -91,6 +104,15 @@ nav {
 // Opening
 .opening {
     background-image: url("../../images/banner.jpg");
+    background-size: cover;
+    color: $secondary-color;
+    width: 100%;
+    height: 400px;
+}
+
+// Opening2
+.opening2 {
+    background-image: url("../../../images/signal-2023-01-17-10-14-37-000.jpg");
     background-size: cover;
     color: $secondary-color;
     width: 100%;
@@ -195,30 +217,10 @@ footer {
 }
 
 #serviceBTNS {
-    justify-content: space-between;
-
-    margin: {
-        top: 20px;
-    }
-}
-
-#serviceBTNS {
     button {
-        display: inline-block;
-        text-transform: uppercase;
-        background-color: transparent;
         color: $text-color;
-
-        margin: {
-            top: 0;
-            left: 10px;
-            right: 10px;
-            bottom: 0;
-        }
-
-        font-size: 30px;
-        transition: all 0.5s;
-        border: 0;
+        background-color: transparent;
+        border: none;
 
         &:after {
             display: block;
@@ -232,9 +234,94 @@ footer {
             transform: scaleX(1);
         }
     }
+
+    justify-content: space-between;
+
+    margin: {
+        top: 20px;
+    }
 }
 
 .serviceLinks {
     border-left: 2px solid $main-color;
     border-right: 2px solid $main-color;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* Black w/ opacity */
+    padding: {
+        top: 60px;
+        bottom: 60px;
+    }
+
+    text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+
+    margin: {
+        top: 5%;
+        left: auto;
+        bottom: 5%;
+        right: auto;
+    }
+
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
