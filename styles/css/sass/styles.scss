@@ -117,7 +117,7 @@ button {
 
 // Opening2
 .opening2 {
-    background-image: url("../../../images/signal-2023-01-17-10-14-37-000.jpg");
+    background-image: url("../../images/signal-2023-01-17-10-14-37-000.jpg");
     background-size: cover;
     color: $secondary-color;
     width: 100%;
@@ -128,7 +128,6 @@ button {
 .blur {
     display: flex;
     // width:  100%;
-    backdrop-filter: blur(4px);
     padding: 20px;
     flex-direction: column;
     justify-content: center;
@@ -294,7 +293,6 @@ span.psw {
     
     }
 
-    text-align: center;
 }
 
 /* Modal Content/Box */
@@ -342,6 +340,9 @@ span.psw {
     }
 }
 
+#container {
+    margin-left: 45%;
+}
 
 
 .html {
