@@ -95,3 +95,12 @@ summary {
    border-collapse: collapse;
    border-spacing: 0;
   }
+
+  button,
+  p,
+  h1,
+  h2,
+  h3,
+  h4{
+    overflow-y: hidden;
+  }

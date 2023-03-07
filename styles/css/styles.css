@@ -96,9 +96,23 @@ table {
   border-spacing: 0;
 }
 
+button,
+p,
+h1,
+h2,
+h3,
+h4 {
+  overflow-y: hidden;
+}
+
+@font-face {
+  font-family: mainFont;
+  src: url("../../../OriginTech.ttf");
+}
 * {
   overflow-x: hidden;
   color: #000000;
+  font-family: mainFont;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -149,6 +163,7 @@ button {
   margin: 0 10px 0 10px;
   font-size: 30px;
   transition: all 0.5s;
+  font-family: "Times New Roman", Times, serif;
 }
 button:after {
   display: block;
@@ -163,12 +178,10 @@ button:hover:after {
 button:hover {
   cursor: pointer;
 }
-button:focus {
-  transform: scaleX(1);
-}
 
 .headerBTNS button:hover {
   color: #ff7130;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #phoneHeader {
@@ -183,6 +196,7 @@ button:focus {
 #mainHeader {
   display: flex;
   padding: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .headerLinks {
@@ -196,19 +210,20 @@ button:focus {
   color: #ffffff;
   width: 100%;
   height: 400px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .opening2 {
-  background-image: url("../../../images/signal-2023-01-17-10-14-37-000.jpg");
+  background-image: url("../../images/signal-2023-01-17-10-14-37-000.jpg");
   background-size: cover;
   color: #ffffff;
   width: 100%;
   height: 400px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .blur {
   display: flex;
-  backdrop-filter: blur(4px);
   padding: 20px;
   flex-direction: column;
   justify-content: center;
@@ -219,6 +234,7 @@ button:focus {
   padding-bottom: 5px;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
   overflow-y: hidden;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .blur h4 {
@@ -226,6 +242,7 @@ button:focus {
   width: 50%;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
   overflow-y: hidden;
+  font-family: "Times New Roman", Times, serif;
 }
 
 footer {
@@ -237,17 +254,20 @@ footer {
   justify-content: space-around;
   padding: 10px;
   width: 100%;
+  font-family: "Times New Roman", Times, serif;
 }
 
 footer div h1 {
   color: #ffffff;
   font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 footer div h2 {
   color: #ffffff;
   font-size: 15px;
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .section {
@@ -262,12 +282,14 @@ footer div h2 {
 .mainH1 {
   text-decoration: underline;
   font-size: 4rem;
+  overflow-y: hidden;
   padding-bottom: 1.3125rem;
 }
 
 .mainParagraph {
   overflow-wrap: break-word;
   font-size: 1.875rem;
+  overflow-y: hidden;
 }
 
 .section3 {
@@ -293,6 +315,7 @@ footer div h2 {
   color: #000000;
   background-color: transparent;
   border: none;
+  font-family: "Times New Roman", Times, serif;
 }
 #serviceBTNS button:after {
   display: block;
@@ -337,7 +360,6 @@ span.psw {
   /* Black w/ opacity */
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: center;
 }
 
 /* Modal Content/Box */
@@ -374,4 +396,8 @@ span.psw {
   to {
     transform: scale(1);
   }
+}
+#container {
+  margin-left: 45%;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=styles.css.map */

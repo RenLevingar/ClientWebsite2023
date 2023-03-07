@@ -1,15 +1,24 @@
 @import "./utilities";
 @import "./reset";
 
+@font-face {
+    font-family: mainFont;
+    src: url("../../../OriginTech.ttf");
+}
+
+//variables for colors
 $main-color: #ff7130;
 $text-color: #000000;
 $secondary-color: #ffffff;
 
+
 // Universal selector
 * {
+    // no overflow on the horizontal line
     overflow-x: hidden;
     color: $text-color;
 
+    // excludes the scrollbar
     &::-webkit-scrollbar {
         display: none;
     }
@@ -43,6 +52,9 @@ body {
 
     // Phones
     @media only screen and (max-width: 480px) and (min-width: 320px) {}
+
+    //sets the font
+    font-family: mainFont;
 }
 
 // Header
@@ -52,6 +64,7 @@ nav {
     background-color: $text-color;
     color: $secondary-color;
     width: 100%;
+    //makes it stay on screen
     position: sticky;
 }
 
@@ -76,7 +89,9 @@ button {
     margin: 0 10px 0 10px;
     font-size: 30px;
     transition: all 0.5s;
+    font-family: 'Times New Roman', Times, serif;
 
+    //after effect for the hover
     &:after {
         display: block;
         content: '';
@@ -85,16 +100,13 @@ button {
         transition: transform 250ms ease-in-out;
     }
 
+    //button hover
     &:hover:after {
         transform: scaleX(1);
     }
 
     &:hover {
         cursor: pointer;
-    }
-
-    &:focus {
-        transform: scaleX(1);
     }
 }
 
@@ -103,6 +115,7 @@ button {
     button {
         &:hover {
             color: $main-color;
+            font-family: 'Times New Roman', Times, serif;
         }
     }
 }
@@ -119,6 +132,7 @@ button {
 #mainHeader {
     display: flex;
     padding: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .headerLinks {
@@ -133,21 +147,22 @@ button {
     color: $secondary-color;
     width: 100%;
     height: 400px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 // Opening2
 .opening2 {
-    background-image: url("../../../images/signal-2023-01-17-10-14-37-000.jpg");
+    background-image: url("../../images/signal-2023-01-17-10-14-37-000.jpg");
     background-size: cover;
     color: $secondary-color;
     width: 100%;
     height: 400px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .blur {
     display: flex;
     // width:  100%;
-    backdrop-filter: blur(4px);
     padding: 20px;
     flex-direction: column;
     justify-content: center;
@@ -160,6 +175,7 @@ button {
         padding-bottom: 5px;
         text-shadow: 0 0 3px $text-color, 0 0 5px $text-color;
         overflow-y: hidden;
+        font-family: 'Times New Roman', Times, serif;
     }
 }
 
@@ -169,6 +185,7 @@ button {
         width: 50%;
         text-shadow: 0 0 3px $text-color, 0 0 5px $text-color;
         overflow-y: hidden;
+        font-family: 'Times New Roman', Times, serif;
     }
 }
 
@@ -182,6 +199,8 @@ footer {
     justify-content: space-around;
     padding: 10px;
     width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 
 footer {
@@ -189,6 +208,7 @@ footer {
         h1 {
             color: $secondary-color;
             font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
         }
     }
 }
@@ -199,6 +219,7 @@ footer {
             color: $secondary-color;
             font-size: 15px;
             text-align: center;
+            font-family: 'Times New Roman', Times, serif;
         }
     }
 }
@@ -215,6 +236,7 @@ footer {
 .mainH1 {
     text-decoration: underline;
     font-size: 4rem;
+    overflow-y: hidden;
 
     padding: {
         bottom: 1.3125rem;
@@ -224,6 +246,7 @@ footer {
 .mainParagraph {
     overflow-wrap: break-word;
     font-size: 1.875rem;
+    overflow-y: hidden;
 }
 
 .section3 {
@@ -246,6 +269,7 @@ footer {
         color: $text-color;
         background-color: transparent;
         border: none;
+        font-family: 'Times New Roman', Times, serif;
 
         &:after {
             display: block;
@@ -301,9 +325,10 @@ span.psw {
     padding: {
         top: 60px;
         bottom: 60px;
+
+
     }
 
-    text-align: center;
 }
 
 /* Modal Content/Box */
@@ -348,5 +373,13 @@ span.psw {
 
     to {
         transform: scale(1)
+    }
+}
+
+#container {
+    margin-left: 45%;
+
+    padding: {
+        bottom: 10px;
     }
 }
