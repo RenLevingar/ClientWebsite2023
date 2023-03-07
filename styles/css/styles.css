@@ -105,9 +105,14 @@ h4 {
   overflow-y: hidden;
 }
 
+@font-face {
+  font-family: mainFont;
+  src: url("../../../OriginTech.ttf");
+}
 * {
   overflow-x: hidden;
   color: #000000;
+  font-family: mainFont;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -159,9 +164,6 @@ button:hover:after {
 }
 button:hover {
   cursor: pointer;
-}
-button:focus {
-  transform: scaleX(1);
 }
 
 .headerBTNS button:hover {
@@ -384,8 +386,5 @@ span.psw {
 }
 #container {
   margin-left: 45%;
-}
-
-html {
-  font-family: "Times New Roman", Times, serif;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=styles.css.map */

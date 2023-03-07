@@ -1,6 +1,11 @@
 @import "./utilities";
 @import "./reset";
 
+@font-face {
+    font-family: mainFont;
+    src: url("../../../OriginTech.ttf");
+}
+//variables for colors
 $main-color: #ff7130;
 $text-color: #000000;
 $secondary-color: #ffffff;
@@ -8,13 +13,15 @@ $secondary-color: #ffffff;
 
 // Universal selector
 * {
+    // no overflow on the horizontal line
     overflow-x: hidden;
     color: $text-color;
-
+// excludes the scrollbar
     &::-webkit-scrollbar {
         display: none;
     }
-
+    //sets the font
+    font-family: mainFont;
 }
 
 // Header
@@ -24,6 +31,7 @@ nav {
     background-color: $text-color;
     color: $secondary-color;
     width: 100%;
+    //makes it stay on screen
     position: sticky;
 }
 
@@ -53,7 +61,7 @@ button {
     font-size: 30px;
     transition: all 0.5s;
     font-family:'Times New Roman', Times, serif;
-
+    //after effect for the hover
     &:after {
         display: block;
         content: '';
@@ -61,17 +69,13 @@ button {
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
     }
-
+    //button hover
     &:hover:after {
         transform: scaleX(1);
     }
 
     &:hover {
         cursor: pointer;
-    }
-
-    &:focus {
-        transform: scaleX(1);
     }
 }
 
@@ -342,9 +346,8 @@ span.psw {
 
 #container {
     margin-left: 45%;
+    padding: {
+        bottom: 10px;
+    }
 }
 
-
-html {
-    font-family: 'Times New Roman', Times, serif;
-}
