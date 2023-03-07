@@ -384,6 +384,10 @@ span.psw {
     transform: scale(1);
   }
 }
-html {
+.html {
   font-family: "Times New Roman", Times, serif;
+}
+
+#detail {
+  background-color: #ff7130;
 }/*# sourceMappingURL=styles.css.map */
