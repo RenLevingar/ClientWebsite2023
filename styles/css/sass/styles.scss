@@ -5,6 +5,7 @@
     font-family: mainFont;
     src: url("../../OriginTech.ttf");
 }
+
 //variables for colors
 $main-color: #ff7130;
 $text-color: #000000;
@@ -16,10 +17,41 @@ $secondary-color: #ffffff;
     // no overflow on the horizontal line
     overflow-x: hidden;
     color: $text-color;
-// excludes the scrollbar
+
+    // excludes the scrollbar
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+// Body
+body {
+
+    // Desktops
+    @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+        button {
+            font-size: clamp(1.25rem, -0.58rem + 2.857vw, 1.563rem);
+        }
+    }
+
+    // Laptops
+    @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        button {
+            font-size: clamp(0.625rem, -3.036rem + 5.714vw, 1.25rem);
+        }
+    }
+
+    // Tablets
+    @media only screen and (max-width: 768px) and (min-width: 481px) {
+        button {
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 10px;
+        }
+    }
+
+    // Phones
+    @media only screen and (max-width: 480px) and (min-width: 320px) {}
 }
 
 // Header
@@ -37,10 +69,6 @@ img {
     padding: {
         right: 30px;
     }
-}
-
-#headerBTNS {
-    margin-right: clamp(-0.313rem, -5.804rem + 8.571vw, 0.625rem);
 }
 
 .headerBTNS {
@@ -67,6 +95,7 @@ button {
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
     }
+
     //button hover
     &:hover:after {
         transform: scaleX(1);
@@ -162,7 +191,8 @@ footer {
     justify-content: space-around;
     padding: 10px;
     width: 100%;
-    
+    font-family: 'Times New Roman', Times, serif;
+
 }
 
 footer {
@@ -285,7 +315,7 @@ span.psw {
         top: 60px;
         bottom: 60px;
 
-    
+
     }
 
 }
@@ -337,8 +367,8 @@ span.psw {
 
 #container {
     margin-left: 45%;
+
     padding: {
         bottom: 10px;
     }
 }
-
