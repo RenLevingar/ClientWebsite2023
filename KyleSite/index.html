@@ -1,63 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
- <link rel="stylesheet" href="style.css">
- <title>QuikTeck</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <title>QuikTek</title>
+    <link rel="icon" href="./images/favicon_io/favicon.ico" type="image/x-icon">
+    <style></style>
 </head>
+
 <body>
- <nav>
-  <img src="./images/clientlogo.png" alt="QuikTeck Logo" id="logo">
-  <button class="fade">Page 3</button>
-  <button class="fade">Page 2</button>
-  <button class="fade">Page 1</button>
- </nav>
+    <nav>
+        <!-- nav header -->
+        <div id="phoneHeader">
+            <p>If you need quick help call us at (111) 111-1111</p>
+        </div>
+        <div id="mainHeader">
+            <img src="./images/logo.png" alt="QuikTeck Logo" id="logo">
+            <div id="menu">
+                <ul>
+                    <li>
+                        <div class="headerLinks" onclick="document.getElementById('id01').style.display='block'">
+                            <button>Virus
+                                Removal</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="headerLinks" onclick="document.getElementById('id02').style.display='block'">
+                            <button>Laptop
+                                Repairs</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="headerLinks" onclick="document.getElementById('id03').style.display='block'">
+                            <button>PC
+                                Repair and Upgrade</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="headerLinks" onclick="document.getElementById('id04').style.display='block'">
+                            <button>Website
+                                design</button>
+                        </div>
+                    </li>
+            </div>
+        </div>
+    </nav>
 
+    <div id="id01" class="modal modal1">
 
-
-<article class="scroller">
- <section>
-  <div class="container">
-   <img src="./images/signal-2023-01-17-10-14-37-000.jpg" alt="computer Img" class="computer">
-   <h1>Gaming Computer Builds</h1>
-   <h3>Get Started on your Gaming Computer Adventure</h3>
-   <button class="buttonCenter fade">Get Started</button>
-  </div>
- </section>
- <section>
-  <div class="container" id="container2">
-   <img src="./images/signal-2023-01-17-10-14-37-000.jpg" alt="computer Img" class="computer">
-   <h1>Laptop Repairs</h1>
-   <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis ratione, eveniet ut voluptate quae asperiores reprehenderit possimus quod minima illum!</h3>
-   <button class="buttonCenter fade">Call Now</button>
-  </div>
- </section>
- <section>
-    <div class="container" id="container3">
-     <img src="./images/signal-2023-01-17-10-14-37-000.jpg" alt="computer Img" class="computer">
-     <h1>Web Design</h1>
-     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, ad!</h3>
-     <button class="buttonCenter fade">Get Started</button>
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <section class="opening2">
+                    <div class="blur">
+                        <h1 class="banner">Virus Removal</h1>
+                        <h4 class="banner">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, quia.
+                        </h4>
+                    </div>
+                </section>
+            </div>
+            <div id="container">
+                <div class="headerBTNS" id="serviceBTNS">
+                    <div onclick="document.getElementById('id01').style.display='none'" class="serviceLinks">
+                        <button>Back</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    </section>
-    <section>
-    <div class="container" id="container4">
-     <img src="./images/signal-2023-01-17-10-14-37-000.jpg" alt="computer Img" class="computer">
-     <h1>Virus Remover</h1>
-     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, provident!</h3>
-     <button class="buttonCenter fade">Get Started</button>
+
+    <div id="id02" class="modal modal2">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <section class="opening2">
+                    <div class="blur">
+                        <h1 class="banner">Laptop Repairs</h1>
+                        <h4 class="banner">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, ipsa!</h4>
+                    </div>
+                </section>
+            </div>
+            <div id="container">
+                <div class="headerBTNS" id="serviceBTNS">
+                    <div onclick="document.getElementById('id02').style.display='none'" class="serviceLinks">
+                        <button>Back</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <footer class="container" id="container5">
-        <div><h2>Call Here: 999-999-9999</h2></div>
-        <p>Email: Somebody@gmail.com</p>
-        <p>Adress: W someplace ave 1234</p>
-        <p>Open at: 9am - 5pm,  Mon - Fri</p>
+
+    <div id="id03" class="modal modal3">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <section class="opening2">
+                    <div class="blur">
+                        <h1 class="banner">PC Repair and Upgrade</h1>
+                        <h4 class="banner">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, ipsa!</h4>
+                    </div>
+                </section>
+            </div>
+            <div id="container">
+                <div class="headerBTNS" id="serviceBTNS">
+                    <div onclick="document.getElementById('id03').style.display='none'" class="serviceLinks">
+                        <button>Back</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="id04" class="modal modal4">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <section class="opening2">
+                    <div class="blur">
+                        <h1 class="banner">Website Design</h1>
+                        <h4 class="banner">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, ipsa!</h4>
+                    </div>
+                </section>
+            </div>
+            <div id="container">
+                <div class="headerBTNS" id="serviceBTNS">
+                    <div onclick="document.getElementById('id04').style.display='none'" class="serviceLinks">
+                        <button>Back</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="shade">
+        <section class="opening">
+            <div class="blur">
+                <h1 class="banner">QuikTek</h1>
+                <h4 class="banner">Computer Repair, Web Design, Virus Removal and more!</h4>
+            </div>
+        </section>
+    </div>
+
+
+
+    <article>
+        <section class="section section1">
+            <div>
+                <h1 class="mainH1">-Overview-</h1>
+                <p class="mainParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint cum, deleniti,
+                    et
+                    adipisci ut rem quam veniam aliquam dolorem exercitationem sequi tenetur eos a? Illo doloribus
+                    tenetur
+                    praesentium, ipsa distinctio, nobis soluta maxime explicabo facere placeat eaque? Nemo, nisi cumque
+                    neque
+                    itaque inventore repellat illo, officia quod, maiores porro eum!</p>
+            </div>
+        </section>
+        <section class="section section2">
+            <div>
+                <h1 class="mainH1">-Services-</h1>
+                <p class="mainParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique consectetur
+                    qui
+                    facere, quaerat ipsa voluptatem perspiciatis? Cum esse placeat, tempora nesciunt soluta ipsum alias
+                    vel non
+                    maxime dolore eum sunt!</p>
+                <div class="headerBTNS" id="serviceBTNS">
+                    <div class="serviceLinks" onclick="document.getElementById('id01').style.display='block'">
+                        <button>Virus
+                            Removal</button>
+                    </div>
+                    <div class="serviceLinks" onclick="document.getElementById('id02').style.display='block'">
+                        <button>Laptop
+                            Repairs</button>
+                    </div>
+                    <div class="serviceLinks" onclick="document.getElementById('id03').style.display='block'"><button>PC
+                            Repair
+                            and Upgrade</button></div>
+                    <div class="serviceLinks" onclick="document.getElementById('id04').style.display='block'">
+                        <button>Website
+                            design</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section3">
+            <div>
+                <h1 class="mainH1">-Contacts-</h1>
+                <p class="mainParagraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos obcaecati animi
+                    quisquam
+                    est harum quo neque optio iusto odit repellendus? Eum nihil voluptas corporis enim velit
+                    perspiciatis ea, quia
+                    cum voluptates est fugiat, illum expedita adipisci fugit porro ducimus maxime eligendi amet!
+                    Repellendus iste
+                    dolore ratione neque maxime esse labore.</p>
+            </div>
+        </section>
+        <section class="section section4">
+            <div>
+                <h1 class="mainH1">-Map-</h1>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106313.06817795211!2d-112.32644368359377!3d33.6238936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b69c08aa18907%3A0x5d77990170c86477!2sQuikTek%20Computer%20Repair%20and%20Upgrade!5e0!3m2!1sen!2sus!4v1677802489320!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </article>
+    <footer>
+
+        <div>
+            <h1>602-290-1586</h1>
+        </div>
+
+        <div>
+            <h2>15224 N 59th Ave</h2>
+            <h2>Suite 4</h2>
+            <h2>Glendale AZ 85306</h2>
+            <h2>602.290.1586</h2>
+            <h2>Dave@QuikTekComputer.com</h2>
+        </div>
+
+        <div>
+            <h2>Virus Removal</h2>
+            <h2>Laptop Repairs</h2>
+            <h2>PC Repair and Upgrade</h2>
+        </div>
+
     </footer>
-   </section>
-</article>
- <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
