@@ -155,14 +155,14 @@ img {
 }
 
 button {
-  display: inline-block;
   text-transform: uppercase;
   background-color: #000000;
   color: #ffffff;
   margin: 0 10px 0 10px;
-  font-size: 30px;
+  font-size: 28px;
   transition: all 0.5s;
   font-family: mainFont;
+  border: 0;
 }
 button:after {
   display: block;

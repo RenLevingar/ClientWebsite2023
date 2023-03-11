@@ -79,14 +79,15 @@ img {
 }
 
 button {
-    display: inline-block;
+    // display: inline-block;
     text-transform: uppercase;
     background-color: $text-color;
     color: $secondary-color;
     margin: 0 10px 0 10px;
-    font-size: 30px;
+    font-size: 28px;
     transition: all 0.5s;
     font-family: mainFont;
+    border: 0;
 
     //after effect for the hover
     &:after {
