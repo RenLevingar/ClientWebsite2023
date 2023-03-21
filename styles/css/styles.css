@@ -117,9 +117,23 @@ h4 {
   display: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  body .flexContainer {
+    flex-direction: column;
+    height: auto;
+  }
+}
 @media only screen and (max-width: 1200px) and (min-width: 1025px) {
   body button {
     font-size: clamp(1.25rem, -0.58rem + 2.857vw, 1.563rem);
+  }
+  body .section3 {
+    width: 100%;
+    float: none;
+  }
+  body .section4 {
+    width: 100%;
+    float: none;
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
@@ -288,14 +302,17 @@ footer div h2 {
 }
 
 .section3 {
-  width: 45%;
-  float: left;
-  height: 610px;
+  width: 50%;
 }
 
 .section4 {
-  width: 45%;
-  float: right;
+  width: 50%;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  height: 37.5rem;
 }
 
 .banner {
@@ -363,13 +380,10 @@ span.psw {
   margin-left: auto;
   margin-bottom: 5%;
   margin-right: auto;
-  /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%;
-  /* Could be more or less, depending on screen size */
 }
 
-/* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
@@ -419,9 +433,7 @@ a {
   left: -5px;
   cursor: pointer;
   opacity: 0;
-  /* hide this */
   z-index: 200;
-  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 

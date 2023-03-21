@@ -1,6 +1,8 @@
+//These are our mixins for the reset stylesheet and basic utilities 
 @import "./utilities";
 @import "./reset";
 
+// this gives uss the cusrom font that we use using WOFF
 @font-face {
     font-family: mainFont;
     src: url("../../OriginTech.ttf");
@@ -27,10 +29,25 @@ $secondary-color: #ffffff;
 // Body
 body {
 
+    @media only screen and (max-width: 1200px) {
+        .flexContainer {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
     // Desktops
     @media only screen and (max-width: 1200px) and (min-width: 1025px) {
         button {
             font-size: clamp(1.25rem, -0.58rem + 2.857vw, 1.563rem);
+        }
+        .section3 {
+            width: 100%;
+            float: none;
+        }
+        .section4 {
+            width: 100%;
+            float: none;
         }
     }
 
@@ -54,7 +71,7 @@ body {
     @media only screen and (max-width: 480px) and (min-width: 320px) {}
 }
 
-// Header
+// Navbar
 nav {
     display: flex;
     flex-direction: column;
@@ -65,12 +82,14 @@ nav {
     position: sticky;
 }
 
+// styling for our logo
 img {
     padding: {
         right: 30px;
     }
 }
 
+// flex container for our header buttons
 .headerBTNS {
     display: flex;
     justify-content: flex-end;
@@ -78,6 +97,7 @@ img {
     align-items: center;
 }
 
+// universal styling for our buttons
 button {
     // display: inline-block;
     text-transform: uppercase;
@@ -108,7 +128,7 @@ button {
     }
 }
 
-
+// hover for the header buttons so that it changes the color of the text when you hover over them
 .headerBTNS {
     button {
         &:hover {
@@ -117,6 +137,7 @@ button {
     }
 }
 
+// Secondary header for the phone number to call
 #phoneHeader {
     display: flex;
     justify-content: center;
@@ -126,18 +147,20 @@ button {
     font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
 }
 
+// basic flex for the header
 #mainHeader {
     display: flex;
     padding: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
     font-family: mainFont;
 }
 
+// making the header buttons have a border on the left and right sides
 .headerLinks {
-    border-left: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid #ffffff;
-    border-right: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid #ffffff;
+    border-left: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid $secondary-color;
+    border-right: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid $secondary-color;
 }
 
-// Opening
+// Opening image and title
 .opening {
     background-image: url("../../images/banner.jpg");
     background-size: cover;
@@ -147,7 +170,7 @@ button {
     box-shadow: inset 100em 100em rgba(0, 0, 0, 0.2);
 }
 
-// Opening2
+// Opening2 for teh popups when you click on the buttons
 .opening2 {
     background-image: url("../../images/signal-2023-01-17-10-14-37-000.jpg");
     background-size: cover;
@@ -156,6 +179,7 @@ button {
     height: 400px;
 }
 
+// 
 .blur {
     display: flex;
     // width:  100%;
@@ -164,21 +188,24 @@ button {
     justify-content: center;
 }
 
-
+// styling for our title in our openings section
 .blur {
     h1 {
         font-size: 115px;
         padding-bottom: 5px;
+        // shadow effect so it is easier to see
         text-shadow: 0 0 3px $text-color, 0 0 5px $text-color;
         overflow-y: hidden;
         font-family: mainFont;
     }
 }
 
+// styling for the other text in the opening section
 .blur {
     h4 {
         font-size: 37px;
         width: 50%;
+        // another shadow effect so it is easier to see
         text-shadow: 0 0 3px $text-color, 0 0 5px $text-color;
         overflow-y: hidden;
     }
@@ -217,6 +244,7 @@ footer {
     }
 }
 
+// basic stylings for each of our sections on the page
 .section {
     display: flex;
     flex-direction: column;
@@ -226,6 +254,7 @@ footer {
     padding: clamp(1.563rem, -0.688rem + 9.6vw, 2.313rem);
 }
 
+// styling for our h1 tags
 .mainH1 {
     text-decoration: underline;
     font-size: 4rem;
@@ -237,27 +266,35 @@ footer {
     }
 }
 
+// styling for our paragraph tags
 .mainParagraph {
     overflow-wrap: break-word;
     font-size: 1.875rem;
     overflow-y: hidden;
 }
 
+// styling specific for the contacts section
 .section3 {
-    width: 45%;
-    float: left;
-    height: 610px
+    width: 50%;
 }
 
+// styling specific for the map section
 .section4 {
-    width: 45%;
-    float: right;
+    width: 50%;
 }
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    height: 37.5rem;
+}
+
 
 .banner {
     color: $secondary-color;
 }
 
+// the underline animation for the service buttons
 #serviceBTNS {
     button {
         color: $text-color;
@@ -284,6 +321,7 @@ footer {
     }
 }
 
+// border left and right for our service buttons
 .serviceLinks {
     border-left: 2px solid $main-color;
     border-right: 2px solid $main-color;
@@ -335,15 +373,15 @@ span.psw {
         right: auto;
     }
 
-    /* 5% from the top, 15% from the bottom and centered */
+    //  5% from the top, 15% from the bottom and centered 
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
+    // Could be more or less, depending on screen size 
 }
 
 
 
-/* Add Zoom Animation */
+// Add Zoom Animation 
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -401,9 +439,9 @@ a {
     left: -5px;
     cursor: pointer;
     opacity: 0;
-    /* hide this */
+    // hide this 
     z-index: 200;
-    /* and place it over the hamburger */
+    // and place it over the hamburger
 
     -webkit-touch-callout: none;
 }
