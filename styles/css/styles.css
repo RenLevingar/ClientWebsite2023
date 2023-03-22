@@ -124,10 +124,11 @@ h4 {
   }
   body .section3, body .section4 {
     width: auto;
+    height: auto;
   }
 }
 @media only screen and (max-width: 1200px) and (min-width: 1025px) {
-  body button {
+  body #serviceBTNS button {
     font-size: clamp(1.25rem, -0.58rem + 2.857vw, 1.563rem);
   }
   body .section3 {
@@ -140,7 +141,7 @@ h4 {
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
-  body button {
+  body #serviceBTNS button {
     font-size: clamp(0.625rem, -3.036rem + 5.714vw, 1.25rem);
   }
   body #contactArea {
@@ -520,7 +521,17 @@ span.psw {
 }
 
 .animate {
+  -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 @keyframes animatezoom {
   from {
@@ -546,8 +557,7 @@ a {
   right: 50px;
   z-index: 100;
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
 }
 
 #menuToggle input {
