@@ -32,6 +32,14 @@ body {
         button {
             font-size: clamp(1.25rem, -0.58rem + 2.857vw, 1.563rem);
         }
+        .section3{
+            padding: 0;
+            margin-left: 20px;
+        }
+        .section4{
+            padding: 0;
+            margin-top: clamp(5.875rem, -5.473rem + 17.714vw, 7.813rem);
+        }
     }
 
     // Laptops
@@ -39,19 +47,155 @@ body {
         button {
             font-size: clamp(0.625rem, -3.036rem + 5.714vw, 1.25rem);
         }
+        #contactArea{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section3{
+            width: 100%;
+            margin-top: clamp(-9.375rem, -2.054rem + -11.429vw, -10.625rem);
+        }
+        .section3 p{
+            margin: 0 clamp(1.875rem, -27.411rem + 45.714vw, 6.875rem) 0 clamp(1.875rem, -27.411rem + 45.714vw, 6.875rem);
+        }
+        .section4{
+            margin-top: clamp(-9.188rem, 1.795rem + -17.143vw, -11.063rem);
+        }
+        #serviceBTNS{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .serviceLinks button{
+            font-size: 45px;
+            margin: 25px 0 25px 0;
+        }
+        .serviceLinks{
+            border: 0px;
+            color: $main-color;
+        }
     }
 
     // Tablets
     @media only screen and (max-width: 768px) and (min-width: 481px) {
-        button {
-            margin-left: 10px;
-            margin-right: 10px;
-            font-size: 10px;
+        .blur{
+            h1{
+                font-size: clamp(6.438rem, -0.79rem + 24.042vw, 10.75rem);
+            }
+            h4{
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        #serviceBTNS{
+            display: flex;
+            flex-direction: column;
+        }
+        .section3{
+           margin-top: clamp(-8.5rem, -4.939rem + -11.847vw, -10.625rem);
+        }
+        .section4{
+            margin-top: clamp(-8.5rem, -4.939rem + -11.847vw, -10.625rem);
+        }
+        .serviceLinks{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0px;
+        }
+        #contactArea{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section3 > div{
+            margin: 0;
+            padding: 0;
+        }
+        .section3 p{
+            margin: 0 20px 0 20px;
+        }
+        .section4 div{
+            width: 80%;
+        }
+        #contactArea section{
+            width: 100%;
         }
     }
 
     // Phones
-    @media only screen and (max-width: 480px) and (min-width: 320px) {}
+    @media only screen and (max-width: 480px) and (min-width: 320px) {
+        #phoneHeader{
+            text-align: center;
+        }
+        .mainParagraph{
+            font-size: 20px;
+            padding: 0 clamp(1.25rem, -1.892rem + 10.453vw, 3.125rem) 0 clamp(1.25rem, -1.892rem + 10.453vw, 3.125rem);
+        }
+        .blur{
+            display: flex;
+            align-items: center;
+            overflow-y: hidden;
+            padding: 0px;
+        }
+        .blur h1{
+            font-size: clamp(4rem, -0.75rem + 23.75vw, 6.375rem);
+        }
+        .blur h4{
+            font-size: clamp(2.188rem, 1.063rem + 5.625vw, 2.75rem);
+            text-align: center;
+        }
+        .section1{
+            .mainParagraph{
+                padding: 0 30px 0 30px;
+            }
+        }
+        .section2{
+            .mainParagraph{
+                padding: 0 30px 30px 30px;
+            }
+        }
+        .mainH1{
+            font-size: clamp(2.75rem, 0.125rem + 13.125vw, 4.063rem);
+            padding-bottom: 20px;
+        }
+        #serviceBTNS{
+            display: flex;
+            flex-direction: column;
+            button {
+                font-size: clamp(1.688rem, -0.313rem + 10vw, 2.688rem);
+                padding: 10px 0 20px 0;
+            }
+        }
+        .serviceLinks{
+            border: 0px;
+        }
+        #contactArea{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            section{
+                width: auto;
+            }
+            .section3{
+                height: 280px;
+                padding: 0px;
+            }
+            .section4{
+                padding: 10px;
+            }
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            margin-top: 20px;
+            div{
+                padding: 8px 0 8px 0;
+            }
+        }
+    }
 }
 
 // Header
