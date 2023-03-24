@@ -1,9 +1,11 @@
+//These are our mixins for the reset stylesheet and basic utilities 
 @import "./utilities";
 @import "./reset";
 
+// this gives uss the cusrom font that we use using WOFF
 @font-face {
     font-family: mainFont;
-    src: url("../../../OriginTech.ttf");
+    src: url("../../OriginTech.ttf");
 }
 
 //variables for colors
@@ -27,10 +29,28 @@ $secondary-color: #ffffff;
 // Body
 body {
 
+    @media only screen and (max-width: 1200px) {
+        .flexContainer {
+            flex-direction: column;
+            height: auto;
+        }
+        .section3, .section4{
+            width: auto;
+        }
+    }
+
     // Desktops
     @media only screen and (max-width: 1200px) and (min-width: 1025px) {
         button {
             font-size: clamp(1.25rem, -0.58rem + 2.857vw, 1.563rem);
+        }
+        .section3{
+            padding: 0;
+            margin-left: 20px;
+        }
+        .section4{
+            padding: 0;
+            margin-top: clamp(5.875rem, -5.473rem + 17.714vw, 7.813rem);
         }
     }
 
@@ -39,25 +59,158 @@ body {
         button {
             font-size: clamp(0.625rem, -3.036rem + 5.714vw, 1.25rem);
         }
+        #contactArea{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section3{
+            width: 100%;
+            margin-top: clamp(-9.375rem, -2.054rem + -11.429vw, -10.625rem);
+        }
+        .section3 p{
+            margin: 0 clamp(1.875rem, -27.411rem + 45.714vw, 6.875rem) 0 clamp(1.875rem, -27.411rem + 45.714vw, 6.875rem);
+        }
+        .section4{
+            margin-top: clamp(-9.188rem, 1.795rem + -17.143vw, -11.063rem);
+        }
+        #serviceBTNS{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .serviceLinks button{
+            font-size: 45px;
+            margin: 25px 0 25px 0;
+        }
+        .serviceLinks{
+            border: 0px;
+            color: $main-color;
+        }
     }
 
     // Tablets
     @media only screen and (max-width: 768px) and (min-width: 481px) {
-        button {
-            margin-left: 10px;
-            margin-right: 10px;
-            font-size: 10px;
+        .blur{
+            h1{
+                font-size: clamp(6.438rem, -0.79rem + 24.042vw, 10.75rem);
+            }
+            h4{
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        #serviceBTNS{
+            display: flex;
+            flex-direction: column;
+        }
+        .section3{
+           margin-top: clamp(-8.5rem, -4.939rem + -11.847vw, -10.625rem);
+        }
+        .section4{
+            margin-top: clamp(-8.5rem, -4.939rem + -11.847vw, -10.625rem);
+        }
+        .serviceLinks{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0px;
+        }
+        #contactArea{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section3 > div{
+            margin: 0;
+            padding: 0;
+        }
+        .section3 p{
+            margin: 0 20px 0 20px;
+        }
+        .section4 div{
+            width: 80%;
+        }
+        #contactArea section{
+            width: 100%;
         }
     }
 
     // Phones
-    @media only screen and (max-width: 480px) and (min-width: 320px) {}
-
-    //sets the font
-    font-family: mainFont;
+    @media only screen and (max-width: 480px) and (min-width: 320px) {
+        #phoneHeader{
+            text-align: center;
+        }
+        .mainParagraph{
+            font-size: 20px;
+            padding: 0 clamp(1.25rem, -1.892rem + 10.453vw, 3.125rem) 0 clamp(1.25rem, -1.892rem + 10.453vw, 3.125rem);
+        }
+        .blur{
+            display: flex;
+            align-items: center;
+            overflow-y: hidden;
+            padding: 0px;
+        }
+        .blur h1{
+            font-size: clamp(4rem, -0.75rem + 23.75vw, 6.375rem);
+        }
+        .blur h4{
+            font-size: clamp(2.188rem, 1.063rem + 5.625vw, 2.75rem);
+            text-align: center;
+        }
+        .section1{
+            .mainParagraph{
+                padding: 0 30px 0 30px;
+            }
+        }
+        .section2{
+            .mainParagraph{
+                padding: 0 30px 30px 30px;
+            }
+        }
+        .mainH1{
+            font-size: clamp(2.75rem, 0.125rem + 13.125vw, 4.063rem);
+            padding-bottom: 20px;
+        }
+        #serviceBTNS{
+            display: flex;
+            flex-direction: column;
+            button {
+                font-size: clamp(1.688rem, -0.313rem + 10vw, 2.688rem);
+                padding: 10px 0 20px 0;
+            }
+        }
+        .serviceLinks{
+            border: 0px;
+        }
+        #contactArea{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            section{
+                width: auto;
+            }
+            .section3{
+                height: 280px;
+                padding: 0px;
+            }
+            .section4{
+                padding: 10px;
+            }
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            margin-top: 20px;
+            div{
+                padding: 8px 0 8px 0;
+            }
+        }
+    }
 }
 
-// Header
+// Navbar
 nav {
     display: flex;
     flex-direction: column;
@@ -66,14 +219,17 @@ nav {
     width: 100%;
     //makes it stay on screen
     position: sticky;
+    z-index: 500;
 }
 
+// styling for our logo
 img {
     padding: {
         right: 30px;
     }
 }
 
+// flex container for our header buttons
 .headerBTNS {
     display: flex;
     justify-content: flex-end;
@@ -81,15 +237,17 @@ img {
     align-items: center;
 }
 
+// universal styling for our buttons
 button {
-    display: inline-block;
+    // display: inline-block;
     text-transform: uppercase;
     background-color: $text-color;
     color: $secondary-color;
     margin: 0 10px 0 10px;
-    font-size: 30px;
+    font-size: 28px;
     transition: all 0.5s;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: mainFont;
+    border: 0;
 
     //after effect for the hover
     &:after {
@@ -110,16 +268,16 @@ button {
     }
 }
 
-
+// hover for the header buttons so that it changes the color of the text when you hover over them
 .headerBTNS {
     button {
         &:hover {
             color: $main-color;
-            font-family: 'Times New Roman', Times, serif;
         }
     }
 }
 
+// Secondary header for the phone number to call
 #phoneHeader {
     display: flex;
     justify-content: center;
@@ -129,37 +287,39 @@ button {
     font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
 }
 
+// basic flex for the header
 #mainHeader {
     display: flex;
     padding: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: mainFont;
 }
 
+// making the header buttons have a border on the left and right sides
 .headerLinks {
-    border-left: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid #ffffff;
-    border-right: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid #ffffff;
+    border-left: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid $secondary-color;
+    border-right: clamp(0.063rem, 0.063rem + 0vw, 0.063rem) solid $secondary-color;
 }
 
-// Opening
+// Opening image and title
 .opening {
     background-image: url("../../images/banner.jpg");
     background-size: cover;
     color: $secondary-color;
     width: 100%;
     height: 400px;
-    font-family: 'Times New Roman', Times, serif;
+    box-shadow: inset 100em 100em rgba(0, 0, 0, 0.2);
 }
 
-// Opening2
+// Opening2 for teh popups when you click on the buttons
 .opening2 {
     background-image: url("../../images/signal-2023-01-17-10-14-37-000.jpg");
     background-size: cover;
     color: $secondary-color;
     width: 100%;
     height: 400px;
-    font-family: 'Times New Roman', Times, serif;
 }
 
+// 
 .blur {
     display: flex;
     // width:  100%;
@@ -168,24 +328,26 @@ button {
     justify-content: center;
 }
 
-
+// styling for our title in our openings section
 .blur {
     h1 {
         font-size: 115px;
         padding-bottom: 5px;
+        // shadow effect so it is easier to see
         text-shadow: 0 0 3px $text-color, 0 0 5px $text-color;
         overflow-y: hidden;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: mainFont;
     }
 }
 
+// styling for the other text in the opening section
 .blur {
     h4 {
         font-size: 37px;
         width: 50%;
+        // another shadow effect so it is easier to see
         text-shadow: 0 0 3px $text-color, 0 0 5px $text-color;
         overflow-y: hidden;
-        font-family: 'Times New Roman', Times, serif;
     }
 }
 
@@ -208,7 +370,6 @@ footer {
         h1 {
             color: $secondary-color;
             font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
         }
     }
 }
@@ -219,11 +380,11 @@ footer {
             color: $secondary-color;
             font-size: 15px;
             text-align: center;
-            font-family: 'Times New Roman', Times, serif;
         }
     }
 }
 
+// basic stylings for each of our sections on the page
 .section {
     display: flex;
     flex-direction: column;
@@ -233,43 +394,52 @@ footer {
     padding: clamp(1.563rem, -0.688rem + 9.6vw, 2.313rem);
 }
 
+// styling for our h1 tags
 .mainH1 {
     text-decoration: underline;
     font-size: 4rem;
     overflow-y: hidden;
+    font-family: mainFont;
 
     padding: {
         bottom: 1.3125rem;
     }
 }
 
+// styling for our paragraph tags
 .mainParagraph {
     overflow-wrap: break-word;
     font-size: 1.875rem;
     overflow-y: hidden;
 }
 
+// styling specific for the contacts section
 .section3 {
-    width: 45%;
-    float: left;
-    height: 610px
+    width: 50%;
 }
 
+// styling specific for the map section
 .section4 {
-    width: 45%;
-    float: right;
+    width: 50%;
 }
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    height: 37.5rem;
+}
+
 
 .banner {
     color: $secondary-color;
 }
 
+// the underline animation for the service buttons
 #serviceBTNS {
     button {
         color: $text-color;
         background-color: transparent;
         border: none;
-        font-family: 'Times New Roman', Times, serif;
 
         &:after {
             display: block;
@@ -291,6 +461,7 @@ footer {
     }
 }
 
+// border left and right for our service buttons
 .serviceLinks {
     border-left: 2px solid $main-color;
     border-right: 2px solid $main-color;
@@ -307,7 +478,7 @@ span.psw {
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 1000;
     /* Sit on top */
     left: 0;
     top: 0;
@@ -342,15 +513,15 @@ span.psw {
         right: auto;
     }
 
-    /* 5% from the top, 15% from the bottom and centered */
+    //  5% from the top, 15% from the bottom and centered 
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
+    // Could be more or less, depending on screen size 
 }
 
 
 
-/* Add Zoom Animation */
+// Add Zoom Animation 
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -381,5 +552,265 @@ span.psw {
 
     padding: {
         bottom: 10px;
+    }
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 100;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    // hide this 
+    z-index: 200;
+    // and place it over the hamburger
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 100;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    right: -100px;
+
+    background: $secondary-color;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu {
+    li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked~ul {
+    transform: none;
+    opacity: 1;
+}
+
+#headerBTNS {
+    background-color: black;
+    position: absolute;
+    top: 25;
+    left: 0px;
+    display: none;
+    margin-left: 100%;
+    width: 100%;
+    height: 75%;
+    transition: all 1s;
+}
+
+#center{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transition {
+    margin-left: 0px;
+}
+
+.burger {
+    height: 3em;
+    width: 3em;
+    position: relative;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.burger .burger-lines:after {
+    left: 0;
+    top: -1em;
+}
+
+.burger .burger-lines:before {
+    left: 1em;
+    top: 1em;
+}
+
+.burger:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+}
+
+.burger .burger-lines {
+    top: 50%;
+    margin-top: -0.125em;
+}
+
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
+    pointer-events: none;
+    display: block;
+    content: '';
+    width: 100%;
+    border-radius: 0.25em;
+    background-color: $secondary-color;
+    height: 0.25em;
+    position: absolute;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+}
+
+.burger .burger-lines:after {
+    left: 0;
+    top: -1em;
+}
+
+.burger .burger-lines:before {
+    left: 0;
+    top: 1em;
+}
+
+.burger.burger-squeeze .burger-lines,
+.burger.burger-squeeze .burger-lines:after,
+.burger.burger-squeeze .burger-lines:before {
+    -webkit-transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+    -o-transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+    transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+}
+
+.burger.burger-squeeze.open .burger-lines,
+.burger.burger-squeeze.open .burger-lines:after,
+.burger.burger-squeeze.open .burger-lines:before {
+    -webkit-transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+    -o-transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+    transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+}
+
+.burger.burger-squeeze.open .burger-lines {
+    background-color: transparent;
+}
+
+.burger.burger-squeeze.open .burger-lines:before,
+.burger.burger-squeeze.open .burger-lines:after {
+    left: 0.5em;
+    top: 0px;
+}
+
+.burger.burger-squeeze.open .burger-lines:before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.burger.burger-squeeze.open .burger-lines:after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#hamburger,
+.burger-lines {
+    overflow-y: visible;
+    overflow-x: visible;
+    z-index: 500;
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        transform: none;
+        opacity: 0;
+        transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 }

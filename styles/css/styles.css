@@ -107,36 +107,224 @@ h4 {
 
 @font-face {
   font-family: mainFont;
-  src: url("../../../OriginTech.ttf");
+  src: url("../../OriginTech.ttf");
 }
+
 * {
   overflow-x: hidden;
   color: #000000;
 }
+
 *::-webkit-scrollbar {
   display: none;
 }
 
-body {
-  font-family: mainFont;
+@media only screen and (max-width: 1200px) {
+  body .flexContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  body .section3,
+  body .section4 {
+    width: auto;
+  }
 }
+
 @media only screen and (max-width: 1200px) and (min-width: 1025px) {
   body button {
     font-size: clamp(1.25rem, -0.58rem + 2.857vw, 1.563rem);
   }
+
+  body .section3 {
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  body .section4 {
+    padding: 0;
+    margin-top: clamp(5.875rem, -5.473rem + 17.714vw, 7.813rem);
+  }
 }
+
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   body button {
     font-size: clamp(0.625rem, -3.036rem + 5.714vw, 1.25rem);
   }
-}
-@media only screen and (max-width: 768px) and (min-width: 481px) {
-  body button {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 10px;
+
+  body #contactArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body .section3 {
+    width: 100%;
+    margin-top: clamp(-9.375rem, -2.054rem - 11.429vw, -10.625rem);
+  }
+
+  body .section3 p {
+    margin: 0 clamp(1.875rem, -27.411rem + 45.714vw, 6.875rem) 0 clamp(1.875rem, -27.411rem + 45.714vw, 6.875rem);
+  }
+
+  body .section4 {
+    margin-top: clamp(-9.188rem, 1.795rem - 17.143vw, -11.063rem);
+  }
+
+  body #serviceBTNS {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  body .serviceLinks button {
+    font-size: 45px;
+    margin: 25px 0 25px 0;
+  }
+
+  body .serviceLinks {
+    border: 0px;
+    color: #ff7130;
   }
 }
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  body .blur h1 {
+    font-size: clamp(6.438rem, -0.79rem + 24.042vw, 10.75rem);
+  }
+
+  body .blur h4 {
+    text-align: center;
+    width: 100%;
+  }
+
+  body #serviceBTNS {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body .section3 {
+    margin-top: clamp(-8.5rem, -4.939rem - 11.847vw, -10.625rem);
+  }
+
+  body .section4 {
+    margin-top: clamp(-8.5rem, -4.939rem - 11.847vw, -10.625rem);
+  }
+
+  body .serviceLinks {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0px;
+  }
+
+  body #contactArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body .section3>div {
+    margin: 0;
+    padding: 0;
+  }
+
+  body .section3 p {
+    margin: 0 20px 0 20px;
+  }
+
+  body .section4 div {
+    width: 80%;
+  }
+
+  body #contactArea section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  body #phoneHeader {
+    text-align: center;
+  }
+
+  body .mainParagraph {
+    font-size: 20px;
+    padding: 0 clamp(1.25rem, -1.892rem + 10.453vw, 3.125rem) 0 clamp(1.25rem, -1.892rem + 10.453vw, 3.125rem);
+  }
+
+  body .blur {
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    padding: 0px;
+  }
+
+  body .blur h1 {
+    font-size: clamp(4rem, -0.75rem + 23.75vw, 6.375rem);
+  }
+
+  body .blur h4 {
+    font-size: clamp(2.188rem, 1.063rem + 5.625vw, 2.75rem);
+    text-align: center;
+  }
+
+  body .section1 .mainParagraph {
+    padding: 0 30px 0 30px;
+  }
+
+  body .section2 .mainParagraph {
+    padding: 0 30px 30px 30px;
+  }
+
+  body .mainH1 {
+    font-size: clamp(2.75rem, 0.125rem + 13.125vw, 4.063rem);
+    padding-bottom: 20px;
+  }
+
+  body #serviceBTNS {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body #serviceBTNS button {
+    font-size: clamp(1.688rem, -0.313rem + 10vw, 2.688rem);
+    padding: 10px 0 20px 0;
+  }
+
+  body .serviceLinks {
+    border: 0px;
+  }
+
+  body #contactArea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  body #contactArea section {
+    width: auto;
+  }
+
+  body #contactArea .section3 {
+    height: 280px;
+    padding: 0px;
+  }
+
+  body #contactArea .section4 {
+    padding: 10px;
+  }
+
+  body footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  body footer div {
+    padding: 8px 0 8px 0;
+  }
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -144,6 +332,7 @@ nav {
   color: #ffffff;
   width: 100%;
   position: sticky;
+  z-index: 500;
 }
 
 img {
@@ -158,15 +347,16 @@ img {
 }
 
 button {
-  display: inline-block;
   text-transform: uppercase;
   background-color: #000000;
   color: #ffffff;
   margin: 0 10px 0 10px;
-  font-size: 30px;
+  font-size: 28px;
   transition: all 0.5s;
-  font-family: "Times New Roman", Times, serif;
+  font-family: mainFont;
+  border: 0;
 }
+
 button:after {
   display: block;
   content: "";
@@ -174,16 +364,17 @@ button:after {
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
+
 button:hover:after {
   transform: scaleX(1);
 }
+
 button:hover {
   cursor: pointer;
 }
 
 .headerBTNS button:hover {
   color: #ff7130;
-  font-family: "Times New Roman", Times, serif;
 }
 
 #phoneHeader {
@@ -198,7 +389,7 @@ button:hover {
 #mainHeader {
   display: flex;
   padding: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
-  font-family: "Times New Roman", Times, serif;
+  font-family: mainFont;
 }
 
 .headerLinks {
@@ -212,7 +403,7 @@ button:hover {
   color: #ffffff;
   width: 100%;
   height: 400px;
-  font-family: "Times New Roman", Times, serif;
+  box-shadow: inset 100em 100em rgba(0, 0, 0, 0.2);
 }
 
 .opening2 {
@@ -221,7 +412,6 @@ button:hover {
   color: #ffffff;
   width: 100%;
   height: 400px;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .blur {
@@ -236,7 +426,7 @@ button:hover {
   padding-bottom: 5px;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
   overflow-y: hidden;
-  font-family: "Times New Roman", Times, serif;
+  font-family: mainFont;
 }
 
 .blur h4 {
@@ -244,7 +434,6 @@ button:hover {
   width: 50%;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
   overflow-y: hidden;
-  font-family: "Times New Roman", Times, serif;
 }
 
 footer {
@@ -262,14 +451,12 @@ footer {
 footer div h1 {
   color: #ffffff;
   font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
 }
 
 footer div h2 {
   color: #ffffff;
   font-size: 15px;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .section {
@@ -285,6 +472,7 @@ footer div h2 {
   text-decoration: underline;
   font-size: 4rem;
   overflow-y: hidden;
+  font-family: mainFont;
   padding-bottom: 1.3125rem;
 }
 
@@ -295,14 +483,17 @@ footer div h2 {
 }
 
 .section3 {
-  width: 45%;
-  float: left;
-  height: 610px;
+  width: 50%;
 }
 
 .section4 {
-  width: 45%;
-  float: right;
+  width: 50%;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  height: 37.5rem;
 }
 
 .banner {
@@ -313,12 +504,13 @@ footer div h2 {
   justify-content: space-between;
   margin-top: 20px;
 }
+
 #serviceBTNS button {
   color: #000000;
   background-color: transparent;
   border: none;
-  font-family: "Times New Roman", Times, serif;
 }
+
 #serviceBTNS button:after {
   display: block;
   content: "";
@@ -326,6 +518,7 @@ footer div h2 {
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
+
 #serviceBTNS button:hover:after {
   transform: scaleX(1);
 }
@@ -346,7 +539,7 @@ span.psw {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 1000;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -371,13 +564,10 @@ span.psw {
   margin-left: auto;
   margin-bottom: 5%;
   margin-right: auto;
-  /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%;
-  /* Could be more or less, depending on screen size */
 }
 
-/* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
@@ -387,19 +577,275 @@ span.psw {
   from {
     -webkit-transform: scale(0);
   }
+
   to {
     -webkit-transform: scale(1);
   }
 }
+
 @keyframes animatezoom {
   from {
     transform: scale(0);
   }
+
   to {
     transform: scale(1);
   }
 }
+
 #container {
   margin-left: 45%;
   padding-bottom: 10px;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 100;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 200;
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 100;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked~ul {
+  transform: none;
+  opacity: 1;
+}
+
+#headerBTNS {
+  background-color: black;
+  position: absolute;
+  top: 25;
+  left: 0px;
+  display: none;
+  margin-left: 100%;
+  width: 100%;
+  height: 75%;
+  transition: all 1s;
+}
+
+#center {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transition {
+  margin-left: 0px;
+}
+
+.burger {
+  height: 3em;
+  width: 3em;
+  position: relative;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.burger .burger-lines:after {
+  left: 0;
+  top: -1em;
+}
+
+.burger .burger-lines:before {
+  left: 1em;
+  top: 1em;
+}
+
+.burger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 150%;
+  width: 150%;
+  top: -25%;
+  left: -25%;
+}
+
+.burger .burger-lines {
+  top: 50%;
+  margin-top: -0.125em;
+}
+
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
+  pointer-events: none;
+  display: block;
+  content: "";
+  width: 100%;
+  border-radius: 0.25em;
+  background-color: #ffffff;
+  height: 0.25em;
+  position: absolute;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.burger .burger-lines:after {
+  left: 0;
+  top: -1em;
+}
+
+.burger .burger-lines:before {
+  left: 0;
+  top: 1em;
+}
+
+.burger.burger-squeeze .burger-lines,
+.burger.burger-squeeze .burger-lines:after,
+.burger.burger-squeeze .burger-lines:before {
+  -webkit-transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
+  -o-transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
+  transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
+}
+
+.burger.burger-squeeze.open .burger-lines,
+.burger.burger-squeeze.open .burger-lines:after,
+.burger.burger-squeeze.open .burger-lines:before {
+  -webkit-transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
+  -o-transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
+  transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
+}
+
+.burger.burger-squeeze.open .burger-lines {
+  background-color: transparent;
+}
+
+.burger.burger-squeeze.open .burger-lines:before,
+.burger.burger-squeeze.open .burger-lines:after {
+  left: 0.5em;
+  top: 0px;
+}
+
+.burger.burger-squeeze.open .burger-lines:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.burger.burger-squeeze.open .burger-lines:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger,
+.burger-lines {
+  overflow-y: visible;
+  overflow-x: visible;
+  z-index: 500;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
