@@ -345,6 +345,10 @@ button:hover {
   display: flex;
   padding: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
   font-family: mainFont;
+<<<<<<< Updated upstream
+=======
+  justify-content: space-between;
+>>>>>>> Stashed changes
 }
 
 .headerLinks {
@@ -680,11 +684,19 @@ a {
   margin-left: 0px;
 }
 
+#logo {
+  height: 150px;
+}
+
 .burger {
   height: 3em;
   width: 3em;
   position: relative;
+<<<<<<< Updated upstream
   font-size: 12px;
+=======
+  font-size: 15px;
+>>>>>>> Stashed changes
   cursor: pointer;
   -webkit-transition: 0.2s all;
   -o-transition: 0.2s all;
