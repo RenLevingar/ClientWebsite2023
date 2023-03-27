@@ -297,10 +297,7 @@ button {
     display: flex;
     padding: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
     font-family: mainFont;
-<<<<<<< Updated upstream
-=======
     justify-content: space-between;
->>>>>>> Stashed changes
 }
 
 // making the header buttons have a border on the left and right sides
@@ -708,20 +705,12 @@ a {
     margin-left: 0px;
 }
 
-#logo {
-    height: 150px;
-}
-
 //styling for the hamburger button
 .burger {
     height: 3em;
     width: 3em;
     position: relative;
-<<<<<<< Updated upstream
     font-size: 12px;
-=======
-    font-size: 15px;
->>>>>>> Stashed changes
     cursor: pointer;
     -webkit-transition: .2s all;
     -o-transition: .2s all;
